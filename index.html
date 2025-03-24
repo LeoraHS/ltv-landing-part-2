@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packit.ai: Residential Moving & Shipping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .estimate-cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        ul li {
+            font-size: 18px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .cta-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Packit.ai: Revolutionizing Your Move with AR/VR Technology</h1>
+        <img src="hero-image.jpg" alt="AR/VR Moving Technology" style="width: 100%; height: auto;">
+    </header>
+    <section>
+        <h2>Instant Moving Estimates with AR/VR Technology</h2>
+        <p>Packit.ai uses cutting-edge AR/VR to inventory your space, allowing you to get accurate, instant estimates for your move. Whether you're moving locally or across the country, we make it easy to plan every step of your move.</p>
+        <p>Get real-time estimates for:</p>
+
+        <!-- 3 Boxes for Time, Cost, Truck Space -->
+        <div class="estimate-cards">
+            <div class="card">
+                <h3>Time</h3>
+                <p>Know exactly how long your move will take.</p>
+            </div>
+            <div class="card">
+                <h3>Cost</h3>
+                <p>Understand the full cost of your move upfront.</p>
+            </div>
+            <div class="card">
+                <h3>Truck Space</h3>
+                <p>See how much space your items will take in a truck.</p>
+            </div>
+        </div>
+        
+        <h3>Meet Our Co-Founders:</h3>
+        <ul>
+            <li>Nina Prabhu</li>
+            <li>Eli Lichtman</li>
+            <li>Leora Sutton</li>
+        </ul>
+
+        <div class="cta-container">
+            <label for="email" style="font-size: 18px;">Sign up here to get an instant quote:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" style="padding: 10px; font-size: 16px; width: 300px; margin-right: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <button>Get Instant Quote</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Packit.ai</p>
+    </footer>
+</body>
+</html>
