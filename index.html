@@ -28,15 +28,29 @@
       text-align: center;
     }
 
+    header .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+    }
+
     header h1 {
       font-size: 2.5rem;
       font-weight: 700;
+      margin-left: 10px;
     }
 
     header p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
       color: #9ca3af;
+    }
+
+    header img {
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1); /* Make the icon white */
     }
 
     .hero {
@@ -131,6 +145,30 @@
       margin-top: 20px;
     }
 
+    .founders {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 2rem 1rem;
+    }
+
+    .founders h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #111827;
+    }
+
+    .founders a {
+      font-size: 1.1rem;
+      color: #2563eb;
+      text-decoration: none;
+      margin: 0.5rem;
+      display: inline-block;
+    }
+
+    .founders a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .features {
         grid-template-columns: 1fr;
@@ -145,10 +183,12 @@
 
 <body>
   <header>
-    <h1>Packit.ai</h1>
+    <div class="logo-container">
+      <img src="favicon.png" alt="Packit.ai Logo" />
+      <h1>Packit.ai</h1>
+    </div>
     <p>Your Smart Moving & Packing Assistant</p>
   </header>
-
   <section class="hero">
     <h2>Move Smarter, Not Harder</h2>
     <p>Use your phone's camera to automatically create an inventory of your belongings and get optimized packing & shipping solutions.</p>
@@ -176,6 +216,15 @@
         <h2>Sign up here to get an instant quote:</h2>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehvFWXAHHz3KKibPW-QEeR4Rz20WJegYn_MlAYLaW3Pns1SA/viewform?embedded=true" width="640" height="678" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        
     </div>
+  </section>
+
+  <!-- Founders Section -->
+  <section class="founders">
+    <h3>Meet Our Founders</h3>
+    <p>Learn more about the brilliant minds behind Packit.ai:</p>
+    <a href="https://www.linkedin.com/in/eli-litchman-419028134/" target="_blank">Eli Litchman</a>
+    <a href="https://www.linkedin.com/in/ninaprabhu/" target="_blank">Nina Prabhu</a>
+    <a href="https://www.linkedin.com/in/leora-huebner-sutton-4a1810146/" target="_blank">Leora Sutton</a>
   </section>
 
   <footer>
