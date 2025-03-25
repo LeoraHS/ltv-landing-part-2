@@ -110,10 +110,66 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+    /* Container for the embedded form */
+    .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 30px auto;
+        text-align: center;
+    }
 
-        .cta-container {
-            margin-top: 30px;
-        }
+    /* Iframe styling for the embedded form */
+    .form-container iframe {
+        width: 100%;
+        max-width: 700px;
+        height: 500px; /* Adjust height as necessary */
+        border: none;
+    }
+
+    /* Form heading */
+    .form-container h2 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    /* Style the labels and buttons for consistency with the site */
+    .form-container label {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+        display: block;
+        text-align: left;
+    }
+
+    .form-container input[type="email"] {
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .form-container button {
+        background-color: #28a745;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .form-container button:hover {
+        background-color: #218838;
+    }
     </style>
 </head>
 <body>
@@ -125,8 +181,7 @@
         <h2>Instant Moving Estimates with AR/VR Technology</h2>
         <p>Packit.ai uses cutting-edge AR/VR to inventory your space, allowing you to get accurate, instant estimates for your move. Whether you're moving locally or across the country, we make it easy to plan every step of your move.</p>
         <p>Get real-time estimates for:</p>
-
-        <!-- 3 Boxes for Time, Cost, Truck Space -->
+    
         <div class="estimate-cards">
             <div class="card">
                 <h3>Time</h3>
@@ -141,20 +196,11 @@
                 <p>See how much space your items will take in a truck.</p>
             </div>
         </div>
-        
-        <h3>Meet Our Co-Founders:</h3>
-        <ul>
-            <li>Nina Prabhu</li>
-            <li>Eli Lichtman</li>
-            <li>Leora Sutton</li>
-        </ul>
-
-        <div class="cta-container">
-            <label for="email" style="font-size: 18px;">Sign up here to get an instant quote:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" style="padding: 10px; font-size: 16px; width: 300px; margin-right: 10px; border-radius: 5px; border: 1px solid #ccc;">
-            <button>Get Instant Quote</button>
-        </div>
-    </section>
+    
+        <div class="form-container">
+            <h2>Sign up here to get an instant quote:</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehvFWXAHHz3KKibPW-QEeR4Rz20WJegYn_MlAYLaW3Pns1SA/viewform?embedded=true" width="640" height="678" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        </div>
+    </section>    
     <footer>
         <p>&copy; 2025 Packit.ai</p>
     </footer>
