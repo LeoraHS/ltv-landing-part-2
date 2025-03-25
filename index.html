@@ -1,208 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Packit.ai: Residential Moving & Shipping</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Packit.ai - Smart Moving Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
+    body {
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
+    header {
+      background-color: #111827;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-        section {
-            padding: 50px 20px;
-            text-align: center;
-            flex: 1;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
 
-        section img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #9ca3af;
+    }
 
-        .estimate-cards {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
 
-        .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            width: 30%;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+    .features {
+      background-color: #ffffff;
+      padding: 4rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
 
-        .card h3 {
-            font-size: 1.5rem;
-            color: #007bff;
-        }
+    .feature {
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      background: #f3f4f6;
+    }
 
-        .card p {
-            font-size: 1rem;
-            color: #333;
-        }
+    .feature h3 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
-        }
+    .cta {
+      background-color: #111827;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
 
-        button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-        }
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1f2937; /* Dark text color */
+    }
 
-        button:hover {
-            background-color: #218838;
-        }
+    .cta button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0;
-        }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f3f4f6;
+      color: #6b7280;
+    }
 
-        ul li {
-            font-size: 18px;
-        }
-
-        input[type="email"] {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-            margin-right: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-    /* Container for the embedded form */
+    /* Styling the Google Form iframe container */
     .form-container {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        margin: 30px auto;
-        text-align: center;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    /* Iframe styling for the embedded form */
+    /* Making the iframe match the design */
     .form-container iframe {
-        width: 100%;
-        max-width: 700px;
-        height: 500px; /* Adjust height as necessary */
-        border: none;
+      width: 100%;
+      max-width: 700px;
+      height: 600px; /* Adjusted height to fit better */
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
     }
 
-    /* Form heading */
-    .form-container h2 {
-        font-size: 2rem;
-        color: #007bff;
-        margin-bottom: 20px;
-    }
+    @media (max-width: 768px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
 
-    /* Style the labels and buttons for consistency with the site */
-    .form-container label {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 10px;
-        display: block;
-        text-align: left;
+      .form-container iframe {
+        height: 500px; /* Reduced height for mobile responsiveness */
+      }
     }
-
-    .form-container input[type="email"] {
-        padding: 12px;
-        font-size: 16px;
-        width: 100%;
-        margin: 10px 0;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-
-    .form-container button {
-        background-color: #28a745;
-        color: white;
-        padding: 12px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-    .form-container button:hover {
-        background-color: #218838;
-    }
-    </style>
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Packit.ai: Revolutionizing Your Move with AR/VR Technology</h1>
-        <img src="hero-image.jpg" alt="AR/VR Moving Technology" style="width: 100%; height: auto;">
-    </header>
-    <section>
-        <h2>Instant Moving Estimates with AR/VR Technology</h2>
-        <p>Packit.ai uses cutting-edge AR/VR to inventory your space, allowing you to get accurate, instant estimates for your move. Whether you're moving locally or across the country, we make it easy to plan every step of your move.</p>
-        <p>Get real-time estimates for:</p>
-    
-        <div class="estimate-cards">
-            <div class="card">
-                <h3>Time</h3>
-                <p>Know exactly how long your move will take.</p>
-            </div>
-            <div class="card">
-                <h3>Cost</h3>
-                <p>Understand the full cost of your move upfront.</p>
-            </div>
-            <div class="card">
-                <h3>Truck Space</h3>
-                <p>See how much space your items will take in a truck.</p>
-            </div>
-        </div>
-    
-        <div class="form-container">
-            <h2>Sign up here to get an instant quote:</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehvFWXAHHz3KKibPW-QEeR4Rz20WJegYn_MlAYLaW3Pns1SA/viewform?embedded=true" width="640" height="678" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        </div>
-    </section>    
-    <footer>
-        <p>&copy; 2025 Packit.ai</p>
-    </footer>
+  <header>
+    <h1>Packit.ai</h1>
+    <p>Your Smart Moving & Packing Assistant</p>
+  </header>
+
+  <section class="hero">
+    <h2>Move Smarter, Not Harder</h2>
+    <p>Use your phone's camera to automatically create an inventory of your belongings and get optimized packing & shipping solutions.</p>
+    <img src="A_realistic_scene_showing_a_person_using_their_sma.png" alt="App demo scanning room with AR interface" />
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>AI-Powered Scanning</h3>
+      <p>Automatically detect furniture, boxes, and personal items using your phone’s camera.</p>
+    </div>
+    <div class="feature">
+      <h3>Optimized Packing Plans</h3>
+      <p>We’ll suggest the best way to pack and what vehicle size you'll need—saving you time and money.</p>
+    </div>
+    <div class="feature">
+      <h3>Inventory Management</h3>
+      <p>Keep track of what’s packed and where it’s going. Never lose a thing during your move.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action Section with Embedded Google Form -->
+  <section class="cta">
+    <div class="form-container">
+        <h2>Sign up here to get an instant quote:</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehvFWXAHHz3KKibPW-QEeR4Rz20WJegYn_MlAYLaW3Pns1SA/viewform?embedded=true" width="640" height="678" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>        
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Packit.ai. All rights reserved.
+  </footer>
 </body>
+
 </html>
